@@ -10,7 +10,7 @@ body{
 }
 @media (max-width: 767px){
   body{
-    background-position: 100% top;
+    padding-bottom: 50px;
   }
 }
 .box-shadow{
