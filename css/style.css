@@ -10,7 +10,7 @@ body{
 }
 @media (max-width: 767px){
   body{
-    padding-bottom: 50px;
+    min-height: 100vh !important;
   }
 }
 .box-shadow{
