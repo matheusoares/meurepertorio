@@ -7,7 +7,11 @@ body{
   background-size: cover; 
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: 100% top;
+}
+@media (max-width: 767px){
+  body{
+    background-position: 100% top;
+  }
 }
 .box-shadow{
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.05),
@@ -15,20 +19,6 @@ body{
 }
 .btn-social-footer{
   max-width: 140px;
-}
-
-@media (max-width: 767px){
-  
-  #home-quote .display-4{
-    font-size: 2.5rem;
-  }
-  body{
-    padding-top: 0;
-  }
-  .fixed-top{
-    position: relative;
-  }
-  
 }
 .logo-index{
   max-width: 200px;
