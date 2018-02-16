@@ -16,7 +16,7 @@ body{
     
   }
   .brand-name{
-    font-size: 2.5em !important;
+    font-size: 2.4em !important;
   }
   .container{
     padding-top: 50px;  
@@ -43,6 +43,7 @@ body{
   border-bottom: 1px solid rgba(255,255,255,0.8);
   background: rgba(255,255,255,0.0);
   border-radius: 0;
+  color: #ffffff;
 }
 .login-input::placeholder{
   color: #ffffff;
