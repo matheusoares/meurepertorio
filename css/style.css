@@ -10,7 +10,7 @@ body{
 }
 @media (max-width: 767px){
   body{
-    min-height: calc(100vh - 10%) !important;
+    min-height: calc(100vh - 5%) !important;
   }
 }
 .box-shadow{
