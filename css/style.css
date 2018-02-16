@@ -10,7 +10,7 @@ body{
 }
 @media (max-width: 767px){
   body{
-    min-height: 100vh !important;
+    min-height: calc(100vh - 10%) !important;
   }
 }
 .box-shadow{
@@ -38,6 +38,7 @@ body{
 .login-input::placeholder{
   color: #ffffff;
 }
+
 .login-submit{
   background: #ffffff;
   color: blue;
