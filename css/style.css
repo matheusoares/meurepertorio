@@ -29,7 +29,18 @@ body{
   color: #ffffff;
   font-size: 3.5em;
 }
-.submit-brand{
+.login-input{
+  border: none;
+  border-bottom: 1px solid rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.0);
+  border-radius: 0;
+}
+.login-input::placeholder,
+.login-input:-ms-input-placeholder,
+.login-input::-ms-input-placeholder{
+  color: #ffffff;
+}
+.login-submit{
   background: #ffffff;
   color: blue;
 }
