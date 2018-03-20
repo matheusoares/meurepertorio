@@ -53,15 +53,3 @@ body{
   background: #ffffff;
   color: blue;
 }
-
-.new-cad{
-  color: #ffffff !important;
-  margin: 10px auto 0;
-  margin-left: 15%;
-}
-
-.new-cad:not(p){
-  margin-left: 20%;
-  text-decoration: underline !important;
-  cursor: pointer;
-}
