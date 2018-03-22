@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="shortcut icon" href="img/favicon.ico">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
@@ -23,27 +24,63 @@
             </button>
           </div>
           <div class="modal-body">
-            ...
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <!-- Form Cad -->
+            <form class="needs-validation">
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputName">Nome Completo</label>
+                  <input type="text" class="form-control" id="inputName" placeholder="insira seu nome">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputEmail">Email</label>
+                  <input type="email" class="form-control" id="inputEmail" placeholder="insira seu email">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputPassword">Senha</label>
+                  <input type="password" class="form-control" id="inputPassword" placeholder="">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputConfirmationPassword">Confirmação de Senha</label>
+                  <input type="password" class="form-control" id="inputConfirmationPassword" placeholder="">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputUserName">Nome de usuário</label>
+                  <input type="text" class="form-control" id="inputUserName" placeholder="insira um nome de usuário">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputDateBorn">Data de Nascimento</label>
+                  <input type="date" class="form-control" id="inputDateBorn" placeholder="">
+                </div>
+              </div>
+              <div class="custom-control custom-checkbox col-md-12 ">
+                  <input type="checkbox" class="custom-control-input" id="customCheck1">
+                  <label class="custom-control-label" for="customCheck1">Li e Aceito os <a href="#">Termos de contrato</a></label>
+              </div>
+              <div class="row justify-content-end">
+                <button type="submit" class="btn btn-primary mt-3 mr-4">Cadastrar</button>
+              </div>
+            </form>
+            <!-- End Form Cad -->
           </div>
         </div>
       </div>
     </div>
     <!--Fecha Modal -->
-    <div class="container container-fluid pt-3">
+    <div class="container container-fluid my-5 py-5">
       <div class="row justify-content-center">
-        <div class="col-md-4 col-lg-3 col-6 align-self-center align-items-center">
-          <img src="img/logo.png" class="align-self-center img-fluid" alt="Meu Repertorio">
+        <div class="col-md-4 col-lg-3 col-6  align-middle">
+          <img src="img/logo.png" class="img-fluid" alt="Meu Repertorio">
           <h1 class="h1 brand-name">Meu <br>Repertório</h1>
           <form>
             <div class="form-group">
-              <input type="email" class="form-control login-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+              <input type="email" class="form-control login-input" id="inputLoginEmail" aria-describedby="inserirEmail" placeholder="Email">
             </div>
             <div class="form-group">
-              <input type="password" class="form-control login-input" id="exampleInputPassword1" placeholder="Password">
+              <input type="password" class="form-control login-input" id="inputLoginSenha" placeholder="Senha">
             </div>
             <button type="submit" class="btn btn-primary btn-block login-submit">Entrar</button>
               <div class="row justify-content-center">
@@ -55,7 +92,6 @@
         </div>
       </div>
     </div>
-    
     
     <script type="text/javascript" src="js/jquery-3.2.1.slim.min.js"></script>
     <script type="text/javascript" src="js/popper.min.js"></script>
