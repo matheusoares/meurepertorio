@@ -136,8 +136,9 @@ a[aria-expanded="true"]::before {
         display: none;
     }
 
-    #sidebar .sidebar-header strong {
+    #sidebar .sidebar-header #sidebarCollapse {
         display: block;
+        margin-left: 80px;
     }
 
     #sidebar ul li a {
