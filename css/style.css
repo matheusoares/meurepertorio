@@ -76,3 +76,6 @@ body{
     color: #ffffff;
     border-radius: 3px;
 }
+.avoid-clicks {
+  pointer-events: none;
+}

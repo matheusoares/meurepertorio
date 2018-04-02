@@ -25,7 +25,7 @@
           </div>
           <div class="modal-body">
             <!-- Form Cad -->
-            <form class="needs-validation">
+            <form class="needs-validation" action="loggedIn/index.html">
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="inputName">Nome Completo</label>
@@ -57,11 +57,11 @@
                 </div>
               </div>
               <div class="custom-control custom-checkbox col-md-12 ">
-                  <input type="checkbox" class="custom-control-input" id="customCheck1">
-                  <label class="custom-control-label" for="customCheck1">Li e Aceito os <a href="#">Termos de contrato</a></label>
+                  <input type="checkbox" class="custom-control-input" id="termosDeContrato">
+                  <label class="custom-control-label" id="labelTermos" for="termosDeContrato">Li e Aceito os <a href="#">Termos de contrato</a></label>
               </div>
               <div class="row justify-content-end">
-                <button type="submit" class="btn btn-primary mt-3 mr-4">Cadastrar</button>
+                <button type="submit" id="submitButton" class="btn btn-primary mt-3 mr-4 disabled avoid-clicks" aria-disabled="true">Cadastrar</button>
               </div>
             </form>
             <!-- End Form Cad -->
@@ -75,7 +75,7 @@
         <div class="col-md-4 col-lg-3 col-6  align-middle">
           <img src="img/logo.png" class="img-fluid" alt="Meu Repertorio">
           <h1 class="h1 brand-name">Meu <br>Repertório</h1>
-          <form>
+          <form action="loggedIn/index.html">
             <div class="form-group">
               <input type="email" class="form-control login-input" id="inputLoginEmail" aria-describedby="inserirEmail" placeholder="Email">
             </div>
