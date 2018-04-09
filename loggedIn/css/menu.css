@@ -1,0 +1,12 @@
+.side-nav{
+	color: #ffffff;
+	height: 100vh;
+	width: 8vw;
+	background: #1c1c1c;
+	margin: 0 !important;
+}
+.top-nav{
+	height: 10vh;
+	background: #eeeeee;
+	margin: 0 !important;
+}
