@@ -1,12 +1,36 @@
 .side-nav{
 	color: #ffffff;
 	height: 100vh;
-	width: 8vw;
 	background: #1c1c1c;
-	margin: 0 !important;
+	margin: 0px !important;
+	transition: margin 2s;
 }
 .top-nav{
 	height: 10vh;
 	background: #eeeeee;
 	margin: 0 !important;
+}
+.btn-menu{
+	border: none;
+	border-top: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+	height: 50px;
+	width: 50px;
+	background-color: rgba(0,0,0,0.0);
+	z-index: 999;
+}
+@media (min-width: 768px){
+	.btn-menu{
+		display: none;
+	}
+}
+@media(max-width: 767px){
+	.hide-menu{
+		margin-left: -16.66vw !important;
+		transition: margin-left 1s;
+	}
+	.show-menu{
+		margin-left: 0vw !important;
+		transition: margin-left 1s;
+	}
 }

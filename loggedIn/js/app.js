@@ -1,7 +1,12 @@
-$(document).ready(function () {
+var btnMenu = document.getElementById("btnMenu");
 
-    $('#sidebarCollapse').on('click', function () {
-        $('#sidebar').toggleClass('active');
-    });
+var sideMenu = document.getElementById("sideMenu");
 
+var topMenu = document.getElementById("topMenu");
+
+btnMenu.addEventListener("click", function(){
+
+	sideMenu.classList.toggle("hide-menu");
+	sideMenu.classList.toggle("show-menu");
+	topMenu.classList.toggle("col-sm-9");
 });
