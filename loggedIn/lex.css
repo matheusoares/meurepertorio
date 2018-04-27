@@ -1,0 +1,46 @@
+/**/
+.vh{
+	height: 100vh;
+}
+.sidenav{
+	color: #ffffff;
+}
+.bg-sidenav{
+	background-color: #1c1c1c;
+}
+.btn-navbar{
+	max-width: 50px;
+}
+.img-navbar{
+	max-width: 2em;
+}
+.brand-size{
+	max-width: 50px;
+}
+.bg-navbar{
+	background: #eeeeee;
+}
+.ip-search{
+	border: none;
+	background: rgba(0,0,0, 0.2);
+	width: 90%;
+	min-height: 80px;
+	outline: none;
+	font-size: 2.5em;
+	text-indent: 1em;
+	transition: background 0.8s;
+}
+.form-search{
+	min-width: 100%;
+	opacity: 1;
+	transition: opacity 0.8s, min-width 0.8s;
+}
+.hidden{
+	opacity: 0;
+	width: 0;
+	transition: opacity 0.8s, width 0.8s;
+}
+.box-shadow{
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,.05),
+				0 4px 8px 0 rgba(0,0,0,.05);
+}

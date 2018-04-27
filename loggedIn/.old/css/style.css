@@ -1,0 +1,5 @@
+@import "menu.css";
+@font-face {
+	font-family: BrandFont;
+	src: url('../assets/OfferingsRegular.otf');
+}

@@ -1,34 +1,63 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="pt-br">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="css/style.css">
+	<title>
+
+	</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Including favicon for website 32x32 -->
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="bootstrap.css">
+
+	<!-- LEX CSS -->
+	<link rel="stylesheet" type="text/css" href="lex.css">
+
 </head>
 <body>
-  <div class="container-fluid p-0">
-    <div class="row no-gutters">
-      <div class="col-2 col-md-1 hide-menu m-0 p-0" id="sideMenu">
-        <nav class="nav flex-column side-nav">
-          <a class="nav-link active" href="#"></a>
-          <a class="nav-link" href="#"></a>
-          <a class="nav-link" href="#"></a>
-          <a class="nav-link disabled" href="#"></a>
-        </nav>
-      </div>
-      <div class="col col-md-11" id="topMenu">
-        <nav class=" navbar navbar-expand-lg m-0 p-0 navbar-light top-nav">
-          <button class="btn-menu" id="btnMenu"></button>
-        </nav>
-      </div>
-    </div>
-  </div>
-  <script type="text/javascript" src="js/jquery-3.2.1.slim.min.js"></script>
-  <script type="text/javascript" src="js/popper.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.js"></script>
-  <script type="text/javascript" src="js/app.js"></script>
+	<div class="container-fluid">
+		<div class="row vh">
+			<!-- sidenav -->
+			<div class="col-sm-1 inactive bg-sidenav sidenav">
+				<img src="icons/logo.png" class="brand-size rounded m-3">
+			</div>
+			<div class="col-sm-11 col-12 p-0">
+				<!-- navbar -->
+				<nav class="navbar navbar-expand-lg bg-navbar box-shadow">
+					<button class="btn bg-navbar mr-0 mr-sm-1 my-auto btn-navbar" id="searchButton" type="button">
+						<img class="img-navbar" id="imgSearch" src="icons/search.png">
+					</button>
+					<div class="ml-auto" id="userSet">
+						<button class="btn bg-navbar mr-0 mr-sm-1 btn-navbar" type="button">
+							<img class="img-navbar" src="icons/user.png">
+						</button>
+						<button class="btn bg-navbar mr-0 mr-sm-2 btn-navbar" type="button">
+							<img class="img-navbar" src="icons/logout.png">
+						</button>
+					</div>
+				</nav>
+				<form action="" class="hidden" id="formSearch">
+					<input type="text" id="inputSearch" placeholder="Digite Sua Pesquisa" class="ip-search box-shadow">
+					<button class="btn bg-navbar mr-0 mr-sm-1 my-auto btn-navbar" id="searchButton" type="button">
+						<img class="img-navbar" id="imgSearch" src="icons/search.png">
+					</button>
+					<div class="serch-filter"></div>
+				</form>
+				<!-- content -->
+				<div class="row m-0">
+					<div class="col-1 col-sm-3">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="jquery-3.3.1.slim.min.js" ></script>
+	<script src="popper.min.js"></script>
+	<script src="bootstrap.js"></script>
+	<script src="functions.js"></script>
 </body>
 </html>
