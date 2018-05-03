@@ -17,21 +17,29 @@
 	<link rel="stylesheet" type="text/css" href="lex.css">
 
 </head>
-<body>
+<body id="container">
 	<div class="container-fluid">
 		<div class="row vh">
 			<!-- sidenav -->
-			<div class="col-sm-1 inactive bg-sidenav sidenav">
-				<img src="icons/logo.png" class="brand-size rounded m-3">
+			<div class="col-xl-1 col-12 off bg-sidenav sidenav" id="sideNav">
+				<img src="icons/logo.png" class="brand-size rounded m-lg-2 m-xl-3 mx-sm-0 mt-2">
+				<ul>
+					<li><img src="icons/home.png" alt=""></li>
+					<li><img src="icons/cifra.png" alt=""></li>
+					<li><img src="icons/repertório.png" alt=""></li>
+					<li><img src="icons/Banda.pngth" alt=""></li>
+				</ul>
 			</div>
-			<div class="col-sm-11 col-12 p-0">
+			<div class="col-xl-11 col-12 p-0">
 				<!-- navbar -->
 				<nav class="navbar navbar-expand-lg bg-navbar box-shadow">
+					<button class="btn bg-navbar mr-0 mr-sm-1 my-auto btn-responsive-sidenav" id="btnResponsiveSideNav" type="button">
+					</button>
 					<button class="btn bg-navbar mr-0 mr-sm-1 my-auto btn-navbar" id="searchButton" type="button">
 						<img class="img-navbar" id="imgSearch" src="icons/search.png">
 					</button>
 					<div class="ml-auto" id="userSet">
-						<button class="btn bg-navbar mr-0 mr-sm-1 btn-navbar" type="button">
+						<button class="btn bg-navbar mr-0 mr-sm-ls btn-user-navbar btn-navbar" type="button">
 							<img class="img-navbar" src="icons/user.png">
 						</button>
 						<button class="btn bg-navbar mr-0 mr-sm-2 btn-navbar" type="button">
@@ -39,17 +47,44 @@
 						</button>
 					</div>
 				</nav>
-				<form action="" class="hidden" id="formSearch">
-					<input type="text" id="inputSearch" placeholder="Digite Sua Pesquisa" class="ip-search box-shadow">
-					<button class="btn bg-navbar mr-0 mr-sm-1 my-auto btn-navbar" id="searchButton" type="button">
-						<img class="img-navbar" id="imgSearch" src="icons/search.png">
+				<!-- search bar -->
+				<form action="#" method="get" class="hidden d-flex flex-row" id="formSearch">
+					<input type="text" id="inputSearch" value="" name="inputSearchName" placeholder="Digite Sua Pesquisa" class="ip-search box-shadow">
+					<button class="btn btn-search-submit box-shadow" type="submit" id="btnSearchSubmit" name="btnSearchSubmitName">
+						<img class="img-navbar" src="icons/search.png">
 					</button>
-					<div class="serch-filter"></div>
+					<div class="search-filter">
+						<p class="lead">Filtrar por:</p>
+						<div class="form-check form-check-inline">
+							<label class="form-check-label" for="inlineCheckbox1">Música: </label>
+							<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+						</div>
+						<div class="form-check form-check-inline">
+							<label class="form-check-label" for="inlineCheckbox2">Banda: </label>
+							<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+						</div>
+						<div class="form-check form-check-inline">
+							<label class="form-check-label" for="inlineCheckbox3">Repertório: </label>
+							<input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+						</div>
+						<label for="inputState">Data de Publicação: </label>
+						<select id="inputState" class="">
+							<option selected>Todos</option>
+							<option>Recentes Primeiro</option>
+							<option>Antigos Primeiro</option>
+						</select>
+					</div>
 				</form>
 				<!-- content -->
-				<div class="row m-0">
-					<div class="col-1 col-sm-3">
-					</div>
+				<div class="row justify-content-center mt-1 d-flex content">
+					<div class="col-11 col-sm-2 bg-dark mx-auto ml-md-3 mr-md-0 mt-3 content-box"></div>
+					<div class="col-11 col-sm-2 bg-dark mx-auto ml-md-3 mr-md-0 mt-3 content-box"></div>
+					<div class="col-11 col-sm-2 bg-dark mx-auto ml-md-3 mr-md-0 mt-3 content-box"></div>
+					<div class="col-11 col-sm-2 bg-dark mx-auto ml-md-3 mr-md-0 mt-3 content-box"></div>
+					<div class="col-11 col-sm-2 bg-dark mx-auto ml-md-3 mr-md-0 mt-3 content-box"></div>
+					<div class="col-11 col-sm-2 bg-dark mx-auto ml-md-3 mr-md-0 mt-3 content-box"></div>
+					<div class="col-11 col-sm-2 bg-dark mx-auto ml-md-3 mr-md-0 mt-3 content-box"></div>
+					<div class="col-11 col-sm-2 bg-dark mx-auto ml-md-3 mr-md-0 mt-3 content-box"></div>
 				</div>
 			</div>
 		</div>

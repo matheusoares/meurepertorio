@@ -1,6 +1,14 @@
-/**/
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,400,600,800');
+*{
+	font-family: 'Raleway', sans-serif;
+}
+/*7233FF*/
+.overflow{
+	overflow: hidden;
+}
 .vh{
-	height: 100vh;
+	min-height: 100vh;
+	height: 100% !important;
 }
 .sidenav{
 	color: #ffffff;
@@ -11,6 +19,10 @@
 .btn-navbar{
 	max-width: 50px;
 }
+.btn-user-navbar{
+	border-radius: 100%;
+	padding: 1px;
+}
 .img-navbar{
 	max-width: 2em;
 }
@@ -18,29 +30,108 @@
 	max-width: 50px;
 }
 .bg-navbar{
-	background: #eeeeee;
-}
-.ip-search{
-	border: none;
-	background: rgba(0,0,0, 0.2);
-	width: 90%;
-	min-height: 80px;
-	outline: none;
-	font-size: 2.5em;
-	text-indent: 1em;
-	transition: background 0.8s;
+	background: #fefefe;
 }
 .form-search{
+	flex-wrap: wrap;
 	min-width: 100%;
 	opacity: 1;
-	transition: opacity 0.8s, min-width 0.8s;
+	min-height: 80px;
+	transition: opacity 0.8s, min-width 1s, min-height 1s;
 }
 .hidden{
 	opacity: 0;
 	width: 0;
-	transition: opacity 0.8s, width 0.8s;
+	height: 0;
+}
+.ip-search{
+	border: none;
+	background: #eeeeee;
+	width: 90%;
+	min-height: 80px;	
+	outline: none;
+	font-size: 2.5em;
+	text-indent: 1em;
+	transition: background 0.8s;
+	color: #1c1c1c;
+	font-weight: 400;
+}
+.ip-search::placeholder{
+	color: #999;
+	font-weight: 100;
+}
+.btn-search-submit{
+	border-radius: 0;
+	background: #eeeeee;
+	outline: none;
+	width: 10%;
 }
 .box-shadow{
 	box-shadow: 0 2px 4px 0 rgba(0,0,0,.05),
 				0 4px 8px 0 rgba(0,0,0,.05);
+}
+.search-filter{
+	padding: 10px 50px 0;
+    background-color: #dddddd;
+    width: 100%;
+}
+.search-filter label{
+	padding-right: 5px
+}
+.search-filter p{
+	margin-bottom: 5px;
+}
+.search-filter select{
+	outline: none;
+	border: 1px solid #eeeeee;
+	border-radius: 5px;
+	background: #eeeeee;
+}
+.row.content{
+	flex-wrap: wrap;
+}
+.content-box{
+	min-height: 250px;
+    min-width: 250px;
+}
+.btn-responsive-sidenav{
+	border-radius: 0;
+	border-bottom: 1px solid;
+	border-top: 1px solid;
+	display: none;
+}
+.btn-responsive-sidenav::before{
+	content: "";
+    width: 25.8px;
+    height: 1px;
+    background-color: black;
+    cursor: pointer;
+    position: absolute;
+    left: 16.3px;
+    top: 30.4px;
+    display: none;
+}
+@media (max-width: 1199px){
+	.off{
+		margin-left: -100vw !important;
+		transition: margin-left 0.8s !important;
+	}
+	.sidenav{
+		position: fixed;
+	    top: 10%;
+	    height: 100vh;
+	    z-index: 99;
+	    margin-left: 0;
+	    transition: margin-left 0.8s;
+	}
+	.btn-responsive-sidenav, 
+	.btn-responsive-sidenav::before{
+		display: block;
+	}
+}
+@media (max-width: 575px){
+	.off{
+		margin-left: calc(-100vw + 15px);
+		height: 100vh;
+	}
 }
