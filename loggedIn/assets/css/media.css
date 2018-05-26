@@ -1,0 +1,32 @@
+@media (max-width: 320px){
+	.sidenav{
+		width: 100vw;
+	}
+	.content{
+		left:2%;
+	}
+}
+@media (max-width: 1199px){
+	.off{
+		margin-left: -100vw !important;
+		transition: margin-left 0.8s !important;
+	}
+	.sidenav{
+		position: fixed;
+	    top: 62px;
+	    height: 100vh;
+	    z-index: 99;
+	    margin-left: 0;
+	    transition: margin-left 0.8s;
+	}
+	.btn-responsive-sidenav, 
+	.btn-responsive-sidenav::before{
+		display: block;
+	}
+}
+@media (max-width: 575px){
+	.off{
+		margin-left: calc(-100vw + 15px);
+		height: 100vh;
+	}
+}
