@@ -1,6 +1,7 @@
+@import url('assets/font/flaticon.css');
 @import url('https://fonts.googleapis.com/css?family=Raleway:100,400,600,800');
 *{
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Raleway', sans-serif!important;
 }
 textarea:focus, input:focus{
     outline: none !important;
@@ -16,12 +17,63 @@ textarea:focus, input:focus{
 	min-height: 100vh;
 	height: 100% !important;
 }
+/*============Sidenav=======================*/
 .sidenav{
 	color: #ffffff;
+    padding: 0 35px;
 }
 .bg-sidenav{
 	background-color: #1c1c1c;
 }
+.sidenav ul{
+    list-style: none;
+    padding: 0;
+    margin-top: 100px;
+    width: 20px;
+}
+.sidenav ul a:hover,
+.sidenav ul li:hover,
+.sidenav ul h4:hover{
+    text-decoration: none;
+    color:#64ACFF!important;
+    font-size: 15px!important;
+    transition: font-size 0.5s, color 0.8s, font-weight 0.8s;
+}
+.sidenav ul a:hover i:before{
+    text-decoration: none;
+    color:#64ACFF!important;
+    font-size: 60px!important;
+    transition: font-size 0.5s, color 0.8s, font-weight 0.8s; 
+}
+.sidenav ul li {
+    margin: 40px 0;
+    color:#ffffff;
+}
+.sidenav ul li i:before{
+    font-size: 50px;
+    margin-left: -2px;
+    color:#ffffff;
+}
+
+.sidenav ul a li h4{
+    font-size: 14px;
+    padding: 0;
+    margin:5px 0;
+}
+.sidenav ul a:nth-child(1) h4{
+    margin-left:5px;
+}
+.sidenav ul a:nth-child(2) h4{
+    margin-left:-1px;
+}
+.sidenav ul a:nth-child(3) h4{
+    margin-left:-13px;
+}
+.sidenav ul a:nth-child(4) h4{
+    margin-left:1px;
+}
+/*============Sidenav=======================*/
+/*============Navbar=======================*/
 .btn-navbar{
 	max-width: 50px;
 }
@@ -138,6 +190,8 @@ textarea:focus, input:focus{
 	background: #eeeeee;
 	margin-bottom:  5px;
 }
+/*============Navbar=======================*/
+/*============Content=======================*/
 .row.content{
 	flex-wrap: wrap;
 }
@@ -170,20 +224,10 @@ textarea:focus, input:focus{
     top: 30.4px;
     display: none;
 }
-.sidenav ul{
-    list-style: none;
-    padding: 0;
-}
-.sidenav ul li {
-    margin:0;
-}
-.sidenav ul li img{
-    width: 50px;
-    filter: invert(95%);
-}
 .content-box{
     max-width: 100%;
 }
+/*============Content=======================*/
 
 
 /*
