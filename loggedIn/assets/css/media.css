@@ -13,7 +13,7 @@
 
 	.brand {position: fixed;z-index: 999; padding: 35px; display: none;animation: open-menu 1s; }
 
-	.navbar{ display: grid; background: red!important;}
+	.navbar{ display: grid;}
 
 	.trigger{display: block; background: blue; max-width: 40px;}
 	.trigger-close{margin-left: 50vw;}
