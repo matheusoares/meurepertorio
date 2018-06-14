@@ -7,97 +7,55 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<!-- Including favicon for website 32x32 -->
-	<link rel="shortcut icon" href="favicon.ico">
-
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="bootstrap.css">
-
-	<!-- LEX CSS -->
-	<link rel="stylesheet" type="text/css" href="lex.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/media.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/animation.css">
+	<!-- Including favicon for website 32x32 
+	<link rel="shortcut icon" href="favicon.ico">-->
 
 </head>
-<body id="container">
-
-	<div class="container-fluid">
-		<div class="row vh">
-			<!-- sidenav -->
-			<div class="col-xl-1 col-12 off bg-sidenav sidenav justify-content-center" id="sideNav">
-				<img src="icons/logo.png" class="brand-size rounded mt-2">
-				<ul>
-					<a href="#"><li><i class="flaticon-home"></i><h4>Home</h4></li></a>
-					<a href="#"><li><i class="flaticon-music-player"></i><h4>Músicas</h4></li></a>
-					<a href="#"><li><i class="flaticon-notebook"></i><h4>Repertórios</h4></li></a>
-					<a href="#"><li><i class="flaticon-people"></i><h4>Bandas</h4></li></a>
-				</ul>
-			</div>
-			<div class="col-xl-11 col-12 p-0">
-				<!-- navbar -->
-				<nav class="navbar navbar-expand-lg bg-navbar box-shadow">
-					<button class="btn bg-navbar mr-0 mr-sm-1 my-auto btn-responsive-sidenav" id="btnResponsiveSideNav" type="button">
-					</button>
-					<button class="btn bg-navbar btn-navbar search-trigger" type="button">
-						<img class="img-navbar" id="imgSearch" src="icons/search.png">
-					</button>
-					<div class="ml-auto" id="userSet">
-						<button class="btn bg-navbar mr-0 mr-sm-ls btn-user-navbar btn-navbar" type="button">
-							<img class="img-navbar" src="icons/user.png">
-						</button>
-						<button class="btn bg-navbar mr-0 mr-sm-2 btn-navbar" type="button">
-							<img class="img-navbar" src="icons/logout.png">
-						</button>
-					</div>
-				</nav>
-				<!-- search bar -->
-				<form action="#" method="get" class="d-flex flex-row form-search hidden init" id="formSearch">
-					<div class="form-check form-check-inline bg-navbar outside-close search-trigger box-shadow">
-						<label class="close-search"></label> 
-					</div>
-
-					<input type="text" id="inputSearch" value="" name="inputSearchName" placeholder="Digite Sua Pesquisa" class="ip-search box-shadow">
-
-					<button class="btn btn-search-submit box-shadow" type="submit" id="btnSearchSubmit" name="btnSearchSubmitName">
-						<img class="img-navbar" src="icons/search.png">
-					</button>
-
-					<div class="search-filter">
-						<p class="lead">Filtrar por:</p>
-						<div class="form-check form-check-inline">
-							<label class="form-check-label" for="inlineCheckbox1">Música: </label>
-							<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-						</div>
-						<div class="form-check form-check-inline">
-							<label class="form-check-label" for="inlineCheckbox2">Banda: </label>
-							<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-						</div>
-						<div class="form-check form-check-inline">
-							<label class="form-check-label" for="inlineCheckbox3">Repertório: </label>
-							<input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-						</div>
-					</div>
-				</form>
-				<!-- content -->
-				<div class="row justify-content-start mt-4 d-flex content">
-					<div class="col-11 col-sm-2 bg-dark content-box"></div>
-					<div class="col-11 col-sm-2 bg-dark content-box"></div>
-					<div class="col-11 col-sm-2 bg-dark content-box"></div>
-					<div class="col-11 col-sm-2 bg-dark content-box"></div>
-					<div class="col-11 col-sm-2 bg-dark content-box"></div>
-					<div class="col-11 col-sm-2 bg-dark content-box"></div>
-					<div class="col-11 col-sm-2 bg-dark content-box"></div>
-					<div class="col-11 col-sm-2 bg-dark content-box"></div>
-					  
-
-				</div>
-			</div>
+<body>
+	
+	<div class="mask"></div>
+	<div class="grid-container grid bg-elw">
+		<div class="brand grid desactive-menu bg-dg">
+			<buttom class="btn-brand bg-lw"></buttom>
+		</div>
+		<div class="navbar bg-lw box-sw">
+			<buttom class="trigger"></buttom>
+		</div>
+		<div class="sidenav grid desactive-menu bg-dg">
+			<a href=""><i class="fas fa-home"></i></a>
+			<a href=""><i class="fas fa-music"></i></a>
+			<a href=""><i class="fas fa-book"></i></a>
+			<a href=""><i class="fas fa-users"></i></a>
+		</div>
+		<div class="content grid bg-elw">
+			<div class="content-box bg-dg"></div>
+			<div class="content-box bg-dg"></div>
+			<div class="content-box bg-dg"></div>
+			<div class="content-box bg-dg"></div>
+			<div class="content-box bg-dg"></div>
+			<div class="content-box bg-dg"></div>
+			<div class="content-box bg-dg"></div>
+			<div class="content-box bg-dg"></div>
+			<div class="content-box bg-dg"></div>
+			<div class="content-box bg-dg"></div>
+			<div class="content-box bg-dg"></div>
+			<div class="content-box bg-dg"></div>
+			<div class="content-box bg-dg"></div>
 		</div>
 	</div>
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="jquery-3.3.1.slim.min.js" ></script>
-	<script src="popper.min.js"></script>
-	<script src="bootstrap.js"></script>
-	<script src="functions.js"></script>
+
+	<!-- CSS Files -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/media.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/animation.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+	
+	<!-- JS Files -->
+	<script src="assets/js/jquery-3.3.1.slim.min.js" ></script>
+	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+	<script src="assets/js/popper.min.js"></script>
+	<script src="assets/js/bootstrap.js"></script>
+	<script src="assets/js/functions.js"></script>
 </body>
 </html>

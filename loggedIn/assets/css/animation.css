@@ -1,10 +1,9 @@
-@keyframes searchOpen {
-	from {width: 0px; opacity:0; visibility: hidden; height: 0;}
-	to {width: 100%; opacity:1; visibility: visible;  height: 80px;}
-}
-@keyframes hide {
-	from {width: 100%; opacity:1; visibility: visible; height: 80px;}
-	to { opacity:0; visibility: hidden; width: 0px;  height: 0;}
-
+@keyframes open-menu {
+	from {margin-left: -100vw;}
+	to {margin-left: 0;}
 }
 
+@keyframes close-menu {
+	from { visibility: visible; margin-left: 0vw;  }
+	to {visibility: hidden; margin-left: -100vw;}
+}
