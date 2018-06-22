@@ -13,7 +13,7 @@
 
 	.brand {position: fixed;z-index: 999; padding: 35px; display: none;animation: open-menu 1s; }
 
-	.navbar{ display: grid;}
+	.navbar{}
 
 	.trigger{display: block; background: blue; max-width: 40px;}
 	.trigger-close{margin-left: 50vw;}
@@ -23,7 +23,7 @@
 	.sidenav a {font-size: 19px; padding: 15px 45px; border-bottom: 1px solid rgba(255,255,255,0.1);}
 	.sidenav a:nth-child(3){padding:15px 29px;}
 	
-	.desactive-menu, .mask{position: absolute; visibility: hidden; animation: close-menu 1s;}
+	.desactive-menu, .mask{visibility: hidden; position: absolute; animation: close-menu 1s;}
 	.active-menu{ 
 	    position: fixed;
 	    width: 50vw!important;

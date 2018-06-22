@@ -4,6 +4,15 @@
 }
 
 @keyframes close-menu {
-	from { visibility: visible; margin-left: 0vw;  }
-	to {visibility: hidden; margin-left: -100vw;}
+	from { position:fixed; width: 50vw; visibility: visible; margin-left: 0vw;  }
+	to {position:fixed; width: 0vw; visibility: hidden; margin-left: -100vw;}
+}
+
+@keyframes drop {
+	from { visibility: hidden; top: -100vh;  }
+	to {visibility: visible; top: 0;}
+}
+@keyframes catch {
+	from { position:relative; visibility: visible; top: 0vh;  }
+	to {position:relative; visibility: visible; top: -100vh;}
 }
