@@ -9,10 +9,17 @@
 }
 
 @keyframes drop {
-	from { visibility: hidden; top: -100vh;  }
-	to {visibility: visible; top: 0;}
+	from {top: -100vh;  }
+	to {top: -20px;}
 }
 @keyframes catch {
-	from { position:relative; visibility: visible; top: 0vh;  }
-	to {position:relative; visibility: visible; top: -100vh;}
+	from { top: -20vh;  }
+	to  {top: -100vh;}
+}
+
+@media (max-width: 991.98px) { 
+	@keyframes drop {
+	from {top: -100vh;  }
+	to {top: 0px;}
+}
 }

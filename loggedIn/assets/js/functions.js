@@ -8,10 +8,10 @@
 
 	$('.search-trigger, .close-search').on('click', function(){
 		
-		if($('.off').hasClass('search')){
-			$('.off').removeClass('search').addClass('search-off');
+		if($('#search').hasClass('search')){
+			$('#search').removeClass('search').addClass('search-off');
 		}else{
-			$('.off').removeClass('search-off').addClass('search');
+			$('#search').removeClass('search-off').addClass('search');
 		}
 		
 	});
