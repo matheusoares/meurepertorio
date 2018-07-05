@@ -1,0 +1,30 @@
+<a class="content-box new-item grid box-sw" href="#/novabanda" id="addbanda">
+	<h3>Adicionar uma nova Banda</h3>
+	<h6></h6>
+	<h6><i class="icon-plus"></i></h6>
+</a>
+<%for(var i = 0; i < bandas.length; i++){%>
+
+<a class="content-box grid box-sw" href="/visualizar">
+	<h3><%=bandas[i].name%></h3>
+	<h6></h6>
+	<%if(bandas[i].status == "1"){%>
+	<h6>ativa</h6>
+	<%}else{%>
+	<h6>inativa</h6>
+	<%}%>
+	
+</a>
+
+<%}%>
+<script>
+	$('#addbanda').click(function(){
+			$.ajax({
+				url:'/novabanda',
+				method: "get",
+				success: function(data){
+					$('#content').html(data);
+				}
+			});
+		});
+</script>

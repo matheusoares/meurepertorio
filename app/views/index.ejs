@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Meu Repertorio - Login</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="manifest" href="/manifest.json">
+
+</head>
+<body>
+  <%if(retorno.msg == 'Cadastro Realizado com sucesso!'){%>
+
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Cadastro Realizado com sucesso!</strong> Faça Login agora Mesmo!
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button> 
+  </div>
+  <%}%>
+<%if(retorno.msg == 'Erro ao realizar o login!'){%>
+
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <strong>Erro ao realizar o login!</strong> Email ou senha incorretos!
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button> 
+  </div>
+  <%}%>
+  <!-- Modal cadastro -->
+  <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="signupModalLabel">Cadastre-se! É Gratuito!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Form Cad -->
+          <form class="needs-validation" action="/cadastro" method="post">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputName">Nome Completo</label>
+                <input type="text" class="form-control" id="inputName" name="name" placeholder="insira seu nome">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputEmail">Email</label>
+                <input type="email" class="form-control" id="inputEmail" name="email" placeholder="insira seu email">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputPassword">Senha</label>
+                <input type="password" class="form-control" id="inputPassword" name="password" onfocusout="confirmaSenhaFunct()" placeholder="insira uma senha">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputConfirmationPassword">Confirmação de Senha</label>
+                <input type="password" onfocusout="confirmaSenhaFunct()" class="form-control" id="inputConfirmationPassword" placeholder="repita a senha">
+              </div>
+            </div>
+            <div class="form-row">
+                <!-- <div class="form-group col-md-6">
+                  <label for="inputUserName">Nome de usuário</label>
+                  <input type="text" class="form-control" id="inputUserName" name="inputUserName" placeholder="insira um nome de usuário">
+                </div> -->
+                <div class="form-group col-md-6">
+                  <label for="inputDateBorn">Data de Nascimento</label>
+                  <input type="date" class="form-control" id="inputDateBorn" name="dateBorn" placeholder="">
+                </div>
+              </div>
+              <div class="custom-control custom-checkbox col-md-12 ">
+                <input type="checkbox" class="custom-control-input" id="termosDeContrato" name="termosDeContrato">
+                <label class="custom-control-label" id="labelTermos" for="termosDeContrato">Li e Aceito os <a href="#">Termos de contrato</a></label>
+              </div>
+              <div class="row justify-content-end">
+                <button type="submit" id="submitButton" class="btn btn-primary mt-3 mr-4 disabled avoid-clicks" aria-disabled="true">Cadastrar</button>
+              </div>
+            </form>
+            <!-- End Form Cad -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Fecha Modal -->
+    <div class="container container-fluid py-3 py-lg-5">
+      <div class="row justify-content-center">
+        <div class="col-md-3 ">
+          <img src="images/logo.png" class="img-fluid" alt="Meu Repertorio">
+          <h1 class="h1 brand-name">Meu <br>Repertório</h1>
+          <form action="/login" method="post">
+            <div class="form-group">
+              <input type="email" class="form-control login-input" id="inputLoginEmail" name="email" aria-describedby="inserirEmail" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control login-input" id="inputLoginSenha" name="password" placeholder="Senha">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block login-submit">Entrar</button>
+            <!-- <div class="row justify-content-center">
+              <a href="#" class="btn-sm col-md-5 col-4 mr-2 fa fa-facebook"></a>
+              <a href="#" class="btn-sm col-md-5 col-4 ml-2 fa fa-google"></a>
+            </div> -->
+          </form>
+          <p class="text-center new-cad" data-toggle="modal" data-target="#signupModal">Ainda não tenho cadastro</p>      
+        </div>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="js/jquery-3.3.1.slim.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+  </body>
+  </html>

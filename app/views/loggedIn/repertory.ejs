@@ -1,0 +1,30 @@
+<a class="content-box new-item grid box-sw" href="#/novorepertorio" id="addrepertorio">
+	<h3>Adicionar um novo Repertório</h3>
+	<h6></h6>
+	<h6><i class="icon-plus"></i></h6>
+</a>
+<%for(var i = 0; i < repertorios.length; i++){%>
+
+<a class="content-box grid box-sw" href="/visualizar">
+	<h3><%=repertorios[i].name%></h3>
+	<h6></h6>
+	<%if(repertorios[i].status == "1"){%>
+	<h6>ativo</h6>
+	<%}else{%>
+	<h6>inativo</h6>
+	<%}%>
+	
+</a>
+
+<%}%>
+<script>
+	$('#addrepertorio').click(function(){
+			$.ajax({
+				url:'/novorepertorio',
+				method: "get",
+				success: function(data){
+					$('#content').html(data);
+				}
+			});
+		});
+</script>

@@ -1,0 +1,22 @@
+<form action="/inserirMusica" class="grid" method="post" style="padding:0 35px;">
+  <div class="form-group">
+    <label for="musicName">Nome da Música</label>
+    <input type="text" class="form-control" name="name" id="musicName" placeholder="exemplo: Evidências">
+    <input type="hidden" name="idUsuario" value="<%=req.req.session._id%>">
+    <input type="hidden" name="status" value="1">
+  </div>
+  <div class="form-group">
+    <label for="musicTone">Tom da Música</label>
+    <input type="text" class="form-control" name="tone" id="musicTone" placeholder="exemplo: Gm">
+  </div>
+  <div class="form-group">
+    <label for="musicband">Nome da Banda</label>
+    <input type="text" class="form-control" name="band" id="musicband" placeholder="exemplo: Banda Djavú">
+  </div>
+  <div class="form-group">
+    <label for="musicContent">Música</label>
+    <textarea class="form-control" id="musicContent" name="musicContent" rows="8"></textarea>
+  </div>
+  <button type="submit" class="btn btn-lg btn-primary" >Salvar</button>
+
+</form>

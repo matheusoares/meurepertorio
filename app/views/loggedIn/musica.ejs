@@ -1,0 +1,34 @@
+<%for(var i = 0; i < result.length; i++){%>
+
+<a class="grid" style="padding: 0 40px;">
+  <h3><%=result[i].name%></h3>
+  <h6><%=result[i].band%></h6>
+  <h6>Tom: <%=result[i].tone%></h6>
+  <%
+
+  var conteudo = result[i].musicContent;
+
+  if(conteudo.length > 638){
+
+    splitContent = conteudo.slice(0, 660);
+    split = conteudo.slice(660, -1);
+
+    console.log(split);
+ %>   
+    <div class="row">
+      <div class="col-12 col-lg-6">  
+        <pre  style="overflow:hidden"><%=splitContent%></pre>
+      </div>
+      <div class="col-12 col-lg-6">  
+        <pre  style="overflow:hidden"><%=split%></pre>
+      </div>
+    </div>
+  <%}else{%>
+    <div class="col-12 col-lg-12">  
+        <pre><%=conteudo%></pre>
+    </div>
+<%}%>
+
+</a>
+
+<%}%>

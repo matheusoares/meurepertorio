@@ -1,0 +1,37 @@
+<a class="content-box new-item grid box-sw" href="#/novamusica" id="addMusica">
+	<h3>Adicionar uma nova música</h3>
+	<h6></h6>
+	<h6><i class="icon-plus"></i></h6>
+</a>
+<%for(var i = 0; i < musicas.length; i++){%>
+
+<a class="content-box grid box-sw" id="musicateste<%=i%>" href="#/musica/<%=musicas[i].name%>">
+	<h3><%=musicas[i].name%></h3>
+	<h6><%=musicas[i].band%></h6>
+	<h6>Tom: <%=musicas[i].tone%></h6>
+</a>
+
+<script>
+	$('#musicateste<%=i%>').click(function(){
+			$.ajax({
+				url:'/visualizar?musica=<%=musicas[i].name%>',
+				method: "get",
+				success: function(data){
+					$('#content').html(data);
+				}
+			});
+		});
+</script>
+
+<%}%>
+<script>
+	$('#addMusica').click(function(){
+			$.ajax({
+				url:'/novamusica',
+				method: "get",
+				success: function(data){
+					$('#content').html(data);
+				}
+			});
+		});
+</script>
