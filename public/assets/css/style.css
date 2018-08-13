@@ -6,7 +6,8 @@
     --transparency:#000c8f17;
     --white:#F5F5F5;
     --black: #000114;
-    --light-gray: #222222a6;
+    --gray:#e7e7e8;
+    --light-gray: #222222c4;
     --separators:#0001142b;
 
     /*Margin and Padding Variables*/
@@ -28,12 +29,12 @@ header{
     top:0;
     left:0;
     display:flex;
-    background-color:var(--blue);
+    background-color:var(--white);
 }
 
 header > img{
     height: 60px;
-    filter: invert(100%);
+    /*filter: invert(100%);*/
     display:block;
     margin: auto 0 auto 64px;
 }
@@ -43,7 +44,7 @@ header > h1{
     letter-spacing:2px;
     font-size:2.3rem;
     font-family: 'Wire One', cursive;
-    color: var(--white);
+    color: var(--black);
 }
 
 header > ul{
@@ -69,13 +70,17 @@ header > ul > li:last-child{
     background-color: var(--black);
 }
 
+header > ul > li:last-child a{
+    color: var(--white);
+}
+
 header > ul > li > a,
 header > ul > li > a:hover{
     padding: 30px 27px;
     margin: 42px 0;
     text-align: center;
     text-decoration:none;
-    color: var(--white);
+    color: var(--black);
 }
 
 nav{
@@ -85,7 +90,7 @@ nav{
     top:80px;
     left:0;
     display:flex;
-    background-color:var(--transparency);
+    background-color:var(--gray);
 }
 
 nav > ul{
@@ -98,19 +103,18 @@ nav > ul{
 nav > ul > li{
     width:25%;
     display:flex;
-    border-bottom: 2px solid transparent;
+    border-top: 2px solid transparent;
     transition: all .3s ease;
 }
 
 nav > ul > li:hover{
-    border-bottom: 2px solid var(--blue);
+    border-top: 2px solid var(--blue);
     transition: all .3s ease;
 }
 
 nav > ul > li:hover .nav-item{
    color: var(--blue);
    text-decoration:none;
-   letter-spacing: 4px;
    transition: all .3s ease; 
 } 
 
@@ -131,3 +135,43 @@ nav > ul > li > span{
     margin-top:8px;
     color: var(--separators);
 }
+
+.container{
+    width: 100vw;
+    min-height: calc(100vh - 80px);
+    display:flex;
+    justify-content:center;
+    margin-top:120px;
+    background-color:var(--blue);
+}
+
+.container > .recent-items,
+.container > .setlist{
+    width:45%;
+    height:calc(100vh - 120px);
+    margin:55px 1%;
+    background-color:var(--gray);
+}
+
+.container h2{
+    margin:16px 32px;
+    position: relative;
+    font-family: "Wire One", sans-serif;
+    font-size:5rem;
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+
+/* .container h2::after{
+    content:' ';
+    position:absolute;
+    top:0px;
+    width:115px;
+    height:95px;
+    opacity:.3;
+    background-color:var(--blue);
+}
+
+.container > .recent-items > h2::after{left:75px; width:120px;}
+
+.container > .setlist > h2::after{left:65px;} */
