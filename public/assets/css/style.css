@@ -73,8 +73,7 @@ header > ul > li:last-child a{
 
 header > ul > li:last-child:hover{
    background-color:var(--white);
-   border-image: linear-gradient(to right bottom, #45a4e0, #2e8de4, #4772e0, #6e4ecf, #9100b0);
-   border-image-slice: 1;
+   border-color: #3F9CC0;
    transition: all .5s ease;
 }
 
@@ -118,12 +117,12 @@ nav > ul > li{
 }
 
 nav > ul > li:hover{
-    background-color:#4772e0;
+    border-top-color: var(--black);
     transition: all .3s ease;
 }
 
 nav > ul > li:hover .nav-item{
- color: var(--white);
+ color:  var(--black);
  text-decoration:none;
  transition: all .3s ease; 
 } 
@@ -202,6 +201,13 @@ nav > ul > li > span{
     padding:16px;
     display:flex;
     color:var(--black);
+    transition: all .3s ease;
+}
+
+.container ul > li > a:hover{
+    text-decoration:none;
+    padding-left:30px;
+    transition: all .3s ease; 
 }
 
 .container ul > li > a:after{
@@ -211,10 +217,6 @@ nav > ul > li > span{
     width:500px;
     height:1px;
     background-color:var(--separators);
-}
-
-.container .setlist ul > li > a:after{
-    top:65px;
 }
 
 .container ul > li > a > figure{
@@ -238,11 +240,34 @@ nav > ul > li > span{
     text-transform:lowercase;
 }
 
-.container .setlist ul > li > a > h4{
-    margin:8px 2px 0;
+.container > .interna.recent-items,
+.container > .interna.setlist{
+    width:45%;
+    margin:55px 0;
 }
 
-.container .internal{
-    width: 90%;
+.container > .interna.recent-items button{
+    padding:16px;
+    position:absolute;
+    right:145px;
+    top:80px;
+    border:2px solid transparent;
+    cursor:pointer;
+    font-family:"Wire One", sans-serif;
+    font-size:2.8rem;
+    letter-spacing: 5px;
+    color:var(--white);
+    background-color:#3F9CC0;
+    transition:all .3s ease;
 }
 
+.container > .interna.recent-items button:hover{
+    background-color:var(--white);
+    border-color:#3F9CC0;
+    color:#3F9CC0;
+    transition:all .3s ease;
+}
+
+.container > .interna.setlist ul{
+    margin-top:112px;
+}
